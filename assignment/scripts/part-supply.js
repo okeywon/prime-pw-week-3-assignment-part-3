@@ -80,11 +80,14 @@ console.log('9. Filling boxes with a "while" loop');
 let parts = 572;
 let boxes = 7;
 let i = 0;
-let totalBoxes = 0;
+let leftOvers = 0;
+let boxesFilled = 0;
 
 while (parts > 0) {
-    totalBoxes += parts / boxes;
+    leftOvers += parts % boxes;
+    boxesFilled += Math.floor(parts/boxes);
     i++;
     break;
 }
-console.log(totalBoxes);
+console.log("Boxes filled:", boxesFilled);
+console.log("Parts left over:", leftOvers);
