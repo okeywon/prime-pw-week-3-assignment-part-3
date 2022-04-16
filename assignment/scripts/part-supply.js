@@ -12,6 +12,7 @@ console.log(partsNeeded);
 console.log('2. Array of supplyChanges:');
 
 let supplyChanges = [3, 5, -6, 0, 7, 11];
+console.log(supplyChanges);
 // 3. Console log the value of the second item in the 'supplyChanges' array
 console.log('3. Second supplyChange is:');
 
@@ -34,14 +35,14 @@ console.log(supplyChanges);
 //    - if the value is negative, format the log as 'Removed x parts.' 
 console.log('6. Showing supplyChanges...');
 
-for (let i = 0; i < supplyChanges.length; i++) {
-    if (i > 0 && i % 2 == 0) {
-        console.log("Added", supplyChanges[i], "parts.")
-    } else if (i === 0) {
-        console.log("No change")
-    } else {
-        console.log("Removed", supplyChanges[i], "parts.");
-    }
+for (let x in supplyChanges) {
+  if (x > 0) {
+    console.log("Added", x, "parts.");
+  } else if (x == 0) {
+        console.log("No changes.");
+  } else {
+        console.log("Removed", x, "parts.");
+  }
 }
 
 // STRETCH GOALS
@@ -49,14 +50,14 @@ console.log('---  Stretch Goals  ---');
 // 7. Rewrite the `for` loop from #6 as a `for of` loop. 
 console.log('7. Showing supplyChanges with "for of" loop');
 
-for (let i of supplyChanges) {
-    if (i > 0 && i % 2 == 0) {
-        console.log("Added", i, "parts.")
-    } else if (i == 0) {
-        console.log("No change")
-    } else {
-        console.log("Removed", i, "parts.");
-    }
+for (let x of supplyChanges) {
+  if (x > 0) {
+    console.log("Added", x, "parts.");
+  } else if (x == 0) {
+        console.log("No changes.");
+  } else {
+        console.log("Removed", x, "parts.");
+  }
 }
 
 // 8. Write a loop to determine the total number of parts available by
